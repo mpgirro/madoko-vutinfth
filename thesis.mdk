@@ -1,0 +1,111 @@
+
+Title       	: TODO Title
+Author      	: TODO Author
+
+[INCLUDE=style/vutinfth]
+
+Email       	: TODO Email
+Copyright   	: TODO Copyright
+Bibliography	: thesis.bib
+
+CSS Header      :
+  .madoko .math-rendering {
+    color: black;
+  }
+
+Equation {
+  @h1-equation;
+  label: "[(@h1.@h1-equation)]{.equation-label}";
+}
+
+<!-------------------------------------------------------------------
+   Define the links to the images 
+--------------------------------------------------------------------->
+
+
+
+
+<!-- HTML -->
+~ Begin HtmlOnly
+[TITLE]
+~ End HtmlOnly
+
+<!-- TeX -->
+~ Begin TexOnly
+~ Begin TexRaw
+\begin{danksagung*}
+~ End TexRaw
+~ End TexOnly
+
+<!-- HTML -->
+~ Begin HtmlOnly
+# Danksagung {-}
+~ End HtmlOnly
+
+Lorem Ipsum
+
+<!-- TeX -->
+~ Begin TexOnly
+~ Begin TexRaw
+\end{danksagung*}
+\begin{kurzfassung}
+~ End TexRaw
+~ End TexOnly
+
+<!-- HTML -->
+~ Begin HtmlOnly
+# Zusammenfassung {-}
+~ End HtmlOnly
+
+Lorem Ipsum
+
+<!-- TeX -->
+~ TexOnly
+~~ TexRaw
+\end{kurzfassung}
+\begin{abstract}
+~~
+~ 
+
+<!-- HTML -->
+~ Begin HtmlOnly
+# Abstract {-}
+~ End HtmlOnly
+
+Lorem Ipsum
+
+~ TexOnly
+~~ TexRaw
+\end{abstract}
+% Select the language of the thesis, e.g., english or naustrian.
+\selectlanguage{english}
+~~
+~ 
+
+[TOC]
+
+[TOC=figures]
+
+[TOC=tables]
+
+~ TexOnly
+~~ TexRaw
+% Switch to arabic numbering and start the enumeration of chapters in the table of content.
+\mainmatter
+~~
+~ 
+
+
+# Chapter 1
+
+Lorem Ipsum
+
+# Chapter 2
+
+Lorem Ipsum
+
+# Chapter 3
+
+Lorem Ipsum
+
+[BIB]
