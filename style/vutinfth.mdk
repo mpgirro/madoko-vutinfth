@@ -1,10 +1,10 @@
 Doc Class     : [draft,final] style/vutinfth.cls
 
-Cite All      : True
+Cite All      : false
 Logo          : False
 Package       : lmodern
 Package       : [T1]fontenc
-Package       : [utf8]inputenc
+<!--Package       : [utf8]inputenc-->
 Package       : fixltx2e
 Package       : amsmath
 Package       : amssymb
@@ -20,7 +20,7 @@ Package       : hyperref
 Package       : [acronym,toc]glossaries
 Heading Endperiod   :
 <!-- IMPORTANT! make sure headings get mapped to \chapters -->
-Heading Base        : 1 
+Heading Base        : 1
 
 Math Mode       : static
 
@@ -56,35 +56,35 @@ Tex Header    :
     % Set persons with 4 arguments:
     %  {title before name}{name}{title after name}{gender}
     %  where both titles are optional (i.e. can be given as empty brackets {}).
-    \setauthor{Pretitle}{\authorname}{Posttitle}{female}
-    \setadvisor{Pretitle}{Forename Surname}{Posttitle}{male}
+    \setauthor{&author-pretitle;}{\authorname}{&author-posttitle;}{&author-gender;}
+    \setadvisor{&advisor-pretitle;}{&advisor;}{&advisor-posttitle;}{&advisor-gender;}
     %
     % For bachelor and master theses:
-    \setfirstassistant{Pretitle}{Forename Surname}{Posttitle}{male}
-    \setsecondassistant{Pretitle}{Forename Surname}{Posttitle}{male}
-    \setthirdassistant{Pretitle}{Forename Surname}{Posttitle}{male}
+    %\setfirstassistant{Pretitle}{&assistant-1st;}{Posttitle}{male}
+    %\setsecondassistant{Pretitle}{&assistant-2nd;}{Posttitle}{male}
+    %\setthirdassistant{Pretitle}{&assistant-3rd;}{Posttitle}{male}
     %
     % For dissertations:
-    \setfirstreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
-    \setsecondreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
+    %\setfirstreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
+    %\setsecondreviewer{Pretitle}{Forename Surname}{Posttitle}{male}
     %
     % For dissertations at the PhD School:
-    \setsecondadvisor{Pretitle}{Forename Surname}{Posttitle}{male}
+    %\setsecondadvisor{Pretitle}{Forename Surname}{Posttitle}{male}
     %
     % Required data.
-    \setaddress{Address}
-    \setregnumber{0123456}
-    \setdate{01}{01}{2001}
-    \settitle{\thesistitle}{&Title;} % Sets English and German version of the title (both can be English or German).
-    \setsubtitle{Optional Subtitle of the Thesis}{Optionaler Untertitel der Arbeit} % Sets English and German version of the subtitle (both can be English or German).
+    \setaddress{&address;}
+    \setregnumber{&regnumber;}
+    \setdate{&day;}{&month;}{&year;}
+    \settitle{\thesistitle}{&title;} % Sets English and German version of the title (both can be English or German).
+    \setsubtitle{&subtitle-en;}{&subtitle-de;} % Sets English and German version of the subtitle (both can be English or German).
     %
     % Select the thesis type: bachelor / master / doctor / phd-school.
     % Bachelor:
-    \setthesis{bachelor}
+    %\setthesis{bachelor}
     %
     % Master:
-    %\setthesis{master}
-    %\setmasterdegree{dipl.} % dipl. / rer.nat. / rer.soc.oec. / master
+    \setthesis{master}
+    \setmasterdegree{dipl.} % dipl. / rer.nat. / rer.soc.oec. / master
     %
     % Doctor:
     %\setthesis{doctor}
@@ -94,7 +94,7 @@ Tex Header    :
     %\setthesis{phd-school} % Deactivate non-English title pages (see below)
     %
     % For bachelor and master:
-    \setcurriculum{Media Informatics and Visual Computing}{Medieninformatik und Visual Computing} % Sets the English and German name of the curriculum.
+    \setcurriculum{&curriculum-en;}{&curriculum-de;} % Sets the English and German name of the curriculum.
     %
     % For dissertations at the PhD School:
     \setfirstreviewerdata{Affiliation, Country}
@@ -112,22 +112,20 @@ Tex Doc Header  :
     \addtitlepage{english} % English title page.
     \addstatementpage
 
-
 @if html {
-  Css Header : 
-    .toc a, .toc a:visited { 
-      color: #135;  
+  Css Header :
+    .toc a, .toc a:visited {
+      color: #135;
     }
     .code {
       background-color: #EEE;
       padding: 0ex 0.2ex 0.1ex 0.2ex;
       border-radius: 0.5ex;
     }
-    pre .code { 
+    pre .code {
       background-color: inherit;
     }
     .madoko .math-rendering {
       color: black;
     }
 }
-

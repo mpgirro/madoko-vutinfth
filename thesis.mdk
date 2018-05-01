@@ -1,6 +1,30 @@
 
-Title       	: TODO Title
-Author      	: TODO Author
+
+Title       	    : TODO
+Subtitle          : TODO
+Subtitle EN       : &subtitle;
+Subtitle DE       : &subtitle;
+Author      	    : TODO
+Author Gender     : male
+Author Pretitle   :
+Author Posttitle  : TODO
+Address           : TODO
+Regnumber         : 1234567
+Curriculum EN     : TODO
+Curriculum DE     : TODO
+
+
+Advisor           : TODO
+Advisor Gender    : male
+Advisor Pretitle  : TODO
+Advisor Posttitle : TODO
+
+Thesis Type       : master <!-- bachelor / master / doctor / phd-school -->
+Bachelor Thesis   : false
+Master Thesis     : true
+Doctor Thesis     : false
+Master Degree     : dipl. <!-- dipl. / rer.nat. / rer.soc.oec. / master -->
+Doctor Degree     : <!-- rer.nat. / techn. / rer.soc.oec. -->
 
 [INCLUDE=style/vutinfth]
 
